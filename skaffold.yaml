@@ -1,0 +1,9 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: microservice-sanscrito
+build:
+  artifacts:
+    - image: softfocus/sanscrito
+      jib:
+        project: br.com.softfocus:sanscrito

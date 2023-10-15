@@ -1,0 +1,59 @@
+server:
+  port: 8103
+
+spring:
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+  application:
+    name: microservice-sanscrito
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      import-check:
+        enabled: false
+    kubernetes:
+      config:
+        name: default-name
+        namespace: default-namespace
+        sources:
+          - name: c1
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: none
+        dialect: org.hibernate.dialect.H2Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=LEGACY
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+
+  config:
+    import: "optional:configserver:${CONFIG_SERVER_URL:http://microservice-config:8888}"
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+
+
+
+logging:
+  file:
+    name: hexagonal.log

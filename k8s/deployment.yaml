@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-sanscrito
+spec:
+  selector:
+    matchLabels:
+      app: microservice-sanscrito
+  template:
+    metadata:
+      labels:
+        app: microservice-sanscrito
+    spec:
+      dnsConfig:
+        options:
+          - name: single-request-reopen
+      containers:
+        - name: microservice-sanscrito
+          image: softfocus/sanscrito
+          ports:
+            - containerPort: 8103

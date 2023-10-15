@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "529c4ec6-dac9-450f-9b56-a2361912be79",
+		"name": "Microservice Base Hexagonal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13540769"
+	},
+	"item": [
+		{
+			"name": "listar, todos os campos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/microservice-sanscrito/sanscritos/v1/?search=ex",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"microservice-sanscritos",
+						"sanscritos",
+						"v1",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "ex"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar, usando specification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/microservice-sanscrito/sanscritos/v1/?specification=id in (5,3) or nome:'Exemplo'",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"microservice-sanscrito",
+						"boilerplates",
+						"v1",
+						""
+					],
+					"query": [
+						{
+							"key": "specification",
+							"value": "id in (5,3) or nome:'Exemplo'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/microservice-sanscrito/sanscritos/v1/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"microservice-sanscrito",
+						"sanscritos",
+						"v1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"id\": 1,\n    \"nome\": \"Exemplo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/microservice-sanscrito/sanscritos/v1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"microservice-sanscrito",
+						"sanscritos",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/microservice-sanscrito/sanscritosv/v1/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"microservice-sanscrito",
+						"sanscritos",
+						"v1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "18302a65-dd64-4dda-906b-3d8647f705e6",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "leadbank-instituicao",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://keycloak.credifocus.com.br/auth/realms/baser/protocol/openid-connect/token/",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

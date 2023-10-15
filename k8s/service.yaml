@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-sanscrito
+spec:
+  type: ClusterIP
+  selector:
+    app: microservice-sanscrito
+  ports:
+    - port: 8103
+      targetPort: 8103

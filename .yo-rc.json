@@ -1,0 +1,10 @@
+{
+  "generator-softfocus": {
+    "appName": "sanscrito",
+    "packageName": "br.com.sanscrito",
+    "databaseType": "postgresql",
+    "features": [],
+    "packageFolder": "br/com/sanscrito",
+    "flywayMigrationCounter": 2
+  }
+}
