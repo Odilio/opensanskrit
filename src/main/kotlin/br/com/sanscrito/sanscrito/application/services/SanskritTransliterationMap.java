@@ -1,4 +1,4 @@
-package br.com.sanscrito.sanscrito.application.services;
+package com.baeldung.camel.boot.sanscrito;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +76,7 @@ public class SanskritTransliterationMap {
 
         TRANSLITERATION_MAP.put("ह", "ha");
 
-    // Alguns conjuntos adicionais (sibilantes e semivogais)
+        // Alguns conjuntos adicionais (sibilantes e semivogais)
         TRANSLITERATION_MAP.put("ळ", "ḷa");
         TRANSLITERATION_MAP.put("क्ष", "kṣa");
         TRANSLITERATION_MAP.put("ज्ञ", "jña");
@@ -107,6 +107,7 @@ public class SanskritTransliterationMap {
         TRANSLITERATION_MAP.put("ँ", "ṁ");  // Anusvara (outra forma)
         TRANSLITERATION_MAP.put("ः", "ḥ");  // Visarga
         TRANSLITERATION_MAP.put("्", "");   // Virama (indica a ausência de uma vogal após uma consoante)
+        TRANSLITERATION_MAP.put("ं", "ṃ");
 
 // Sinais adicionais
         TRANSLITERATION_MAP.put("०", "0");
@@ -130,6 +131,8 @@ public class SanskritTransliterationMap {
     static {
         CLUSTER_MAP = new HashMap<>();
         CLUSTER_MAP.put("क्ष", "kṣa");
+        CLUSTER_MAP.put("स्वा", "svā");
+        CLUSTER_MAP.put("हा", "hā");
         CLUSTER_MAP.put("ज्ञ", "jña");
         CLUSTER_MAP.put("त्र", "tra");
         CLUSTER_MAP.put("श्र", "śra");
@@ -147,6 +150,7 @@ public class SanskritTransliterationMap {
         CLUSTER_MAP.put("फ्र", "phra");
         CLUSTER_MAP.put("ब्र", "bra");
         CLUSTER_MAP.put("भ्र", "bhra");
+        CLUSTER_MAP.put("भ॒द्रं", "bhraṃ");
         CLUSTER_MAP.put("म्र", "mra");
         CLUSTER_MAP.put("य्र", "yra");
         CLUSTER_MAP.put("ल्र", "lra");
@@ -168,6 +172,27 @@ public class SanskritTransliterationMap {
         CLUSTER_MAP.put("प्त", "pta");
         CLUSTER_MAP.put("प्थ", "ptha");
         CLUSTER_MAP.put("म्न", "mna");
+        CLUSTER_MAP.put("ष्ट", "ṣṭa");
+        CLUSTER_MAP.put("ङ्घ", "ṅgha");
+        CLUSTER_MAP.put("ञ्च", "ñca");
+        CLUSTER_MAP.put("ञ्छ", "ñcha");
+        CLUSTER_MAP.put("ष्ण", "ṣṇa");
+        CLUSTER_MAP.put("र्क", "rka");
+        CLUSTER_MAP.put("र्ख", "rkha");
+        CLUSTER_MAP.put("र्ग", "rga");
+        CLUSTER_MAP.put("र्घ", "rgha");
+        CLUSTER_MAP.put("र्ण", "raṇa");
+        CLUSTER_MAP.put("शृ", "śṛ");
+        CLUSTER_MAP.put("कर्णे॑", "karaṇe");
+        CLUSTER_MAP.put("देवाः", "devāḥ");
+        CLUSTER_MAP.put("अत्रि॑णा", "atriṇā");
+        CLUSTER_MAP.put("क्रिमे", "krime");
+        CLUSTER_MAP.put("ब्रह्म॑णा", "brahmaṇā");
+        CLUSTER_MAP.put("हन्मि", "hanmi");
+        CLUSTER_MAP.put("ज॒मद॑ग्निना", "jamadagninā");
+        CLUSTER_MAP.put("राजा", "rājā");
+        CLUSTER_MAP.put("कण्वे॑न", "kaṇvena");
+
     }
     public static Map<String, String> getMap() {
         return TRANSLITERATION_MAP;

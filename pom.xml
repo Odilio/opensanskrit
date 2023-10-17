@@ -221,13 +221,15 @@
                         <image>openjdk:19-jdk-slim-buster</image>
                     </from>
                     <to>
-                        <image>softfocus/${project.artifactId}:latest</image>
+                        <image>odilio/${project.artifactId}:latest</image>
                     </to>
                     <container>
                         <jvmFlags>
                             <jvmFlag>-Xms256m</jvmFlag>
                             <jvmFlag>-Xmx512m</jvmFlag>
                         </jvmFlags>
+                        <mainClass>br.com.softfocus.sanscrito.Application</mainClass>
+
                     </container>
                 </configuration>
             </plugin>
