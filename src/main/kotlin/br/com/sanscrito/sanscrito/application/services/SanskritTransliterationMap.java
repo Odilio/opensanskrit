@@ -1,4 +1,4 @@
-package com.baeldung.camel.boot.sanscrito;
+package br.com.sanscrito.sanscrito.application.services;
 
 import java.util.HashMap;
 import java.util.Map;

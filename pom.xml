@@ -222,13 +222,17 @@
                     </from>
                     <to>
                         <image>odilio/${project.artifactId}:latest</image>
+                        <auth>
+                            <username>odilio</username>
+                            <password>Nofan123</password>
+                        </auth>
                     </to>
                     <container>
                         <jvmFlags>
                             <jvmFlag>-Xms256m</jvmFlag>
                             <jvmFlag>-Xmx512m</jvmFlag>
                         </jvmFlags>
-                        <mainClass>br.com.softfocus.sanscrito.Application</mainClass>
+                        <mainClass>br.com.sanscrito.Application</mainClass>
 
                     </container>
                 </configuration>
