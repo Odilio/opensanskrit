@@ -35,18 +35,6 @@ public class SanskritTransliterationMap {
         TRANSLITERATION_MAP.put("ज", "ja");
         TRANSLITERATION_MAP.put("झ", "jha");
         TRANSLITERATION_MAP.put("ञ", "nya");
-        TRANSLITERATION_MAP.put("क", "ka");
-        TRANSLITERATION_MAP.put("ख", "kha");
-        TRANSLITERATION_MAP.put("ग", "ga");
-        TRANSLITERATION_MAP.put("घ", "gha");
-        TRANSLITERATION_MAP.put("ङ", "nga");
-
-        TRANSLITERATION_MAP.put("च", "cha");
-        TRANSLITERATION_MAP.put("छ", "chha");
-        TRANSLITERATION_MAP.put("ज", "ja");
-        TRANSLITERATION_MAP.put("झ", "jha");
-        TRANSLITERATION_MAP.put("ञ", "nya");
-
         TRANSLITERATION_MAP.put("ट", "ṭa");
         TRANSLITERATION_MAP.put("ठ", "ṭha");
         TRANSLITERATION_MAP.put("ड", "ḍa");
@@ -192,6 +180,7 @@ public class SanskritTransliterationMap {
         CLUSTER_MAP.put("ज॒मद॑ग्निना", "jamadagninā");
         CLUSTER_MAP.put("राजा", "rājā");
         CLUSTER_MAP.put("कण्वे॑न", "kaṇvena");
+
 
     }
     public static Map<String, String> getMap() {
