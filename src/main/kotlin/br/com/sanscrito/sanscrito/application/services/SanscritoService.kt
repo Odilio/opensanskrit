@@ -12,12 +12,7 @@ import org.springframework.stereotype.Service
 @Service
 class SanscritoService : SanscritoServicePort {
 
-    @Autowired
-    private lateinit var sanscritoAdapter: SanscritoPersistencePort
 
-
-    @Autowired
-    private lateinit var messageSource: MessageSource
 
     private val log = LoggerFactory.getLogger(javaClass)
 
@@ -50,8 +45,6 @@ class SanscritoService : SanscritoServicePort {
             TranslateOptions.newBuilder().setApiKey("AIzaSyB4DiEdFoGf-86FhwsXS5hRRB17zgEkSdw").build().service
 
         //Translate translate = TranslateOptions.getDefaultInstance().getService();
-
-
 
         // Traduz para inglês (ou outra língua de sua escolha)
 

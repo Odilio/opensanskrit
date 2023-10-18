@@ -80,17 +80,6 @@ public class SanskritTransliterationMap {
         TRANSLITERATION_MAP.put("ै", "ai");
         TRANSLITERATION_MAP.put("ो", "o");
         TRANSLITERATION_MAP.put("ौ", "au");
-        TRANSLITERATION_MAP.put("ं", "m");
-        TRANSLITERATION_MAP.put("ः", "h");
-        TRANSLITERATION_MAP.put("ा", "aa");
-        TRANSLITERATION_MAP.put("ि", "i");
-        TRANSLITERATION_MAP.put("ी", "ii");
-        TRANSLITERATION_MAP.put("ु", "u");
-        TRANSLITERATION_MAP.put("ू", "uu");
-        TRANSLITERATION_MAP.put("े", "e");
-        TRANSLITERATION_MAP.put("ै", "ai");
-        TRANSLITERATION_MAP.put("ो", "o");
-        TRANSLITERATION_MAP.put("ौ", "au");
         TRANSLITERATION_MAP.put("ं", "ṁ");  // Anusvara
         TRANSLITERATION_MAP.put("ँ", "ṁ");  // Anusvara (outra forma)
         TRANSLITERATION_MAP.put("ः", "ḥ");  // Visarga
@@ -110,9 +99,15 @@ public class SanskritTransliterationMap {
         TRANSLITERATION_MAP.put("९", "9");
 
 
+        TRANSLITERATION_MAP.put("।", "|");
+        TRANSLITERATION_MAP.put("॥", "||");
+
         //telugo
         TRANSLITERATION_MAP.put("ॐ", "'Om");
 
+// Mapeamento para os acentos Védicos
+        TRANSLITERATION_MAP.put("॒", "`");
+        TRANSLITERATION_MAP.put("॑", "^");
         // ... e assim por diante para outros diacríticos.
     }
 
