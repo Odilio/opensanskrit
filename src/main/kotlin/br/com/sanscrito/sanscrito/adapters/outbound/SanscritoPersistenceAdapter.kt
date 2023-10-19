@@ -5,10 +5,8 @@ import br.com.sanscrito.sanscrito.adapters.model.SanscritoModel
 import br.com.sanscrito.sanscrito.adapters.outbound.repositories.SanscritoRepository
 import br.com.sanscrito.sanscrito.adapters.mapper.SanscritoMapper
 import br.com.sanscrito.sanscrito.ports.output.SanscritoPersistencePort
-import com.turkraft.springfilter.boot.FilterSpecification
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Pageable
-import org.springframework.data.jpa.domain.Specification
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
 import java.time.LocalDateTime
@@ -38,8 +36,4 @@ class SanscritoPersistenceAdapter : SanscritoPersistencePort {
 
     override fun deleteById(id: Long) = sanscritoRepository.deleteById(id)
 
-    private fun buildSpecification(specificationString: String?): Specification<SanscritoModel>? =
-        specificationString?.let {
-            FilterSpecification(specificationString)
-        }
 }

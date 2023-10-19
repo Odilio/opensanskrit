@@ -12,12 +12,10 @@ import org.springframework.stereotype.Repository
 @Repository
 interface SanscritoRepository : JpaRepository<SanscritoModel, Long> {
 
-    fun findAll(spec: Specification<SanscritoModel>?, page: Pageable?): Page<SanscritoModel>
-
     @Query(
         """
-        SELECT u FROM SanscritoModel u WHERE 
-            CAST(u.id as text) like upper(CONCAT('%',:search,'%')) 
+        SELECT u FROM SanscritoModel u WHERE
+            CAST(u.id as text) like upper(CONCAT('%',:search,'%'))
             or upper(u.nome) like upper(CONCAT('%',:search,'%'))
             or to_char(u.dataHoraUltimaAtualizacao, 'dd/MM/yyyy') like CONCAT('%',:search,'%')
             or to_char(u.dataHoraUltimaAtualizacao, 'yyyy-MM-dd') like CONCAT('%',:search,'%')

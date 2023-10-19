@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8080
 
 spring:
   mvc:
@@ -45,14 +45,8 @@ spring:
       pageable:
         one-indexed-parameters: true
 
-  config:
-    import: "optional:configserver:${CONFIG_SERVER_URL:http://microservice-config:8888}"
-
   jackson:
     property-naming-strategy: SNAKE_CASE
-
-
-
 
 logging:
   file:

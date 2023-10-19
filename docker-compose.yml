@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    frontend:
+        image: odilio/front-sanscrito:v1
+        ports:
+            - "80:80"
+        depends_on:
+            - backend
+        networks:
+            - sanscrito-network
+
+    backend:
+        image: odilio/sanscrito:latest
+        ports:
+            - "8080:8080" # Assumindo que o Spring Boot esteja executando na porta 8080 por padrão
+        networks:
+            - sanscrito-network
+
+networks:
+    sanscrito-network:
+        driver: bridge
