@@ -175,6 +175,11 @@ public class SanskritTransliterationMap {
         CLUSTER_MAP.put("ज॒मद॑ग्निना", "jamadagninā");
         CLUSTER_MAP.put("राजा", "rājā");
         CLUSTER_MAP.put("कण्वे॑न", "kaṇvena");
+        CLUSTER_MAP.put("धीमहि", "dhīmahi");
+        CLUSTER_MAP.put("विद्महे", "vidmahe");
+        CLUSTER_MAP.put("तन्नो", "tanno");
+
+
 
 
     }
