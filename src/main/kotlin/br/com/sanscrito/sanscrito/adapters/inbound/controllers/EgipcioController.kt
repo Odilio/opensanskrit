@@ -5,8 +5,10 @@ import br.com.sanscrito.sanscrito.adapters.dto.MantraDTO
 import br.com.sanscrito.sanscrito.adapters.dto.SanscritoDTO
 import br.com.sanscrito.sanscrito.adapters.mapper.SanscritoMapper
 import br.com.sanscrito.sanscrito.application.services.MantrasService
+import br.com.sanscrito.sanscrito.ports.input.EgipcioServicePort
 import br.com.sanscrito.sanscrito.ports.input.MantrasServicePort
 import br.com.sanscrito.sanscrito.ports.input.SanscritoServicePort
+import br.com.sanscrito.sanscrito.ports.input.TextosServicePort
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page
@@ -20,16 +22,16 @@ import javax.validation.Valid
 @Validated
 @RestController
 @CrossOrigin(origins = ["*"], maxAge = 3600)
-@RequestMapping("/sanscrito")
-class SanscritoController {
+@RequestMapping("/egipcio")
+class EgipcioController {
 
     private val log = LoggerFactory.getLogger(javaClass)
 
     @Autowired
-    private lateinit var service: SanscritoServicePort
+    private lateinit var service: EgipcioServicePort
 
     @Autowired
-    private lateinit var serviceMantrasService: MantrasServicePort
+    private lateinit var serviceMantrasService: TextosServicePort
 
     @GetMapping(value = ["/v1/transcript"])
     fun transliterarSanscrito(@RequestParam(required = false) sanskrit: String?): String? {
@@ -44,7 +46,7 @@ class SanscritoController {
         return sanskrit?.let { service.translate(it) }
     }
 
-    @GetMapping(value = ["/v1/mantra"])
+    @GetMapping(value = ["/v1/texto"])
     fun retornaMantra(@RequestParam(required = false) sanskrit: String?): MantraDTO? {
 
         return sanskrit?.let { serviceMantrasService.retornaMantra(it) }

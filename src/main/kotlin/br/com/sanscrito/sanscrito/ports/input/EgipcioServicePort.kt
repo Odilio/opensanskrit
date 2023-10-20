@@ -1,15 +1,14 @@
 package br.com.sanscrito.sanscrito.ports.input
 
-import br.com.sanscrito.sanscrito.adapters.dto.MantraDTO
 import br.com.sanscrito.sanscrito.adapters.mapper.SanscritoMapper
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 
-interface MantrasServicePort {
+interface EgipcioServicePort {
 
-    fun listarMantras(): List<String>
+    fun transliterate(sanskrit: String): String
 
-    fun retornaMantra(tituloMantra: String): MantraDTO
+    fun translate(sanskrit: String): String
 
 
 }

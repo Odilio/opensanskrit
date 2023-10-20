@@ -220,6 +220,14 @@
                         </jvmFlags>
 
                     </container>
+                    <extraDirectories>
+                        <paths>
+                            <path>
+                                <from>mantras</from>
+                                <into>/mantras</into>
+                            </path>
+                        </paths>
+                    </extraDirectories>
                 </configuration>
             </plugin>
             <plugin>

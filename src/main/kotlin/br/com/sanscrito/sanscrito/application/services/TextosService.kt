@@ -2,17 +2,18 @@ package br.com.sanscrito.sanscrito.application.services
 
 import br.com.sanscrito.sanscrito.adapters.dto.MantraDTO
 import br.com.sanscrito.sanscrito.ports.input.MantrasServicePort
+import br.com.sanscrito.sanscrito.ports.input.TextosServicePort
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.io.File
 
 @Service
-class MantrasService : MantrasServicePort {
+class TextosService : TextosServicePort {
 
 
 
     private val log = LoggerFactory.getLogger(javaClass)
-    private val mantrasFolder = File("mantras")
+    private val mantrasFolder = File("egipciotextos")
 
     override fun retornaMantra(tituloMantra: String): MantraDTO {
         log.info("Método retornaMantra chamado com o título: $tituloMantra")

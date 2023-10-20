@@ -5,7 +5,7 @@ import br.com.sanscrito.sanscrito.adapters.mapper.SanscritoMapper
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 
-interface MantrasServicePort {
+interface TextosServicePort {
 
     fun listarMantras(): List<String>
 

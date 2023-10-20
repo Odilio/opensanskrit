@@ -2,7 +2,7 @@ version: '3'
 
 services:
     frontend:
-        image: odilio/front-sanscrito:v1
+        image: odilio/front-sanscrito:v2
         ports:
             - "80:80"
         depends_on:
